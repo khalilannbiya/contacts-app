@@ -1,18 +1,19 @@
 import React from "react";
-import { addContact } from "../utils/data";
-import ContactInput from "../components/ContactInput";
+import { Link } from "react-router-dom";
 
-function AddPage() {
-   function onAddContactHandler(contact) {
-      addContact(contact);
-   }
-
+function Navigation() {
    return (
-      <section>
-         <h2>Tambah kontak</h2>
-         <ContactInput addContact={onAddContactHandler} />
-      </section>
+      <nav className="navigation">
+         <ul>
+            <li>
+               <Link to="/">Home</Link>
+            </li>
+            <li>
+               <Link to="/add">Add</Link>
+            </li>
+         </ul>
+      </nav>
    );
 }
 
-export default AddPage;
+export default Navigation;
